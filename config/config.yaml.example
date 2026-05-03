@@ -1,0 +1,26 @@
+# Nova-Flix Configuration
+# Copy to config.yaml and fill in your API keys
+
+radarr:
+  url: "http://192.168.1.X:7878"
+  api_key: "your_radarr_api_key"
+
+sonarr:
+  url: "http://192.168.1.X:8989"
+  api_key: "your_sonarr_api_key"
+
+prowlarr:
+  url: "http://192.168.1.X:9696"
+  api_key: "your_prowlarr_api_key"
+
+qbittorrent:
+  url: "http://192.168.1.X:8080"
+  username: "admin"
+  password: "your_password"
+
+jellyfin:
+  url: "http://localhost:8096"
+  api_key: "your_jellyfin_api_key"
+
+ollama:
+  url: "http://localhost:11434"

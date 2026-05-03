@@ -1,0 +1,26 @@
+# Nova-Flix Configuration
+# Windows apps via WSL gateway (172.20.16.1)
+
+radarr:
+  url: "http://172.20.16.1:7878"
+  api_key: "d04fcfd4117e4e48b7b1da6ef9492dc7"
+
+sonarr:
+  url: "http://172.20.16.1:8989"
+  api_key: "your_sonarr_api_key"
+
+prowlarr:
+  url: "http://172.20.16.1:9696"
+  api_key: "3fd232d4264244f092da856c9ea3772c"
+
+qbittorrent:
+  url: "http://172.20.16.1:8080"
+  username: "admin"
+  password: "olitec"
+
+jellyfin:
+  url: "http://localhost:8096"
+  api_key: "your_jellyfin_api_key"
+
+ollama:
+  url: "http://localhost:11434"

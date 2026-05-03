@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: nova-flix-jellyfin
+    restart: unless-stopped
+    ports:
+      - "8096:8096"
+      - "8920:8920"  # HTTPS
+    environment:
+      - JELLYFIN_PublishedServerUrl=http://localhost:8096
+    volumes:
+      - ./jellyfin/config:/config
+      - ./jellyfin/cache:/cache
+      - /mnt/c/Users/niko/Movies:/movies:ro
+      - /mnt/c/Users/niko/Videos:/videos:ro
+    # GPU acceleration (Intel QSV)
+    # devices:
+    #   - /dev/dri:/dev/dri
+
+# Add media directories to the host if needed:
+# /mnt/c/Users/niko/Movies -> Movies folder
+# /mnt/c/Users/niko/Videos -> TV Shows folder
